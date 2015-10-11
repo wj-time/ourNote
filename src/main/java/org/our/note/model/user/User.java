@@ -16,9 +16,6 @@ import javax.persistence.TemporalType;
 @Table(name = "user")
 public class User implements Serializable, Cloneable {
 
-	/**
-	 * Copyright(c) 2010-2013 by XiangShang Inc. All Rights Reserved
-	 */
 	private static final long serialVersionUID = 1076875498665483718L;
 
 	/**
@@ -68,6 +65,30 @@ public class User implements Serializable, Cloneable {
 	@Column(name = "lastest_login_ip", length = 32)
 	private String lastestLoginIp;
 
+	/**
+	 * 真实姓名
+	 */
+	@Column(name = "real_name")
+	private String realName;
+	
+	/**
+	 * qq
+	 */
+	@Column(name = "qq")
+	private String qq;
+	
+	/**
+	 * website
+	 */
+	@Column(name = "website")
+	private String website;
+	
+	/**
+	 * github
+	 */
+	@Column(name = "github")
+	private String github;
+	
 	/**
 	 * 昵称
 	 */
