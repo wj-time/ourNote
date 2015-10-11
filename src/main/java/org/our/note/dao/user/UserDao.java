@@ -18,5 +18,9 @@ public class UserDao  extends BaseDao{
 	public List<User> getAll(){
 		return super.list();
 	}
+	
+	public User add(User user) {
+        return super.add(user);
+    }
 }
  

@@ -5,13 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
-<link href="statics/images/base.css" rel="stylesheet">
+<link href="statics/css/base.css" rel="stylesheet">
 <!--[if lt IE 9]>
-<script src="images/html5shiv.js"></script>
+<script src="statics/js/html5shiv.js"></script>
 <![endif]-->
 </head>
 <body>
-<div class="login_top_btn"><a class="btn" href="register.html">新用户注册</a></div>
+<div class="login_top_btn"><a class="btn" href="register.jsp">新用户注册</a></div>
 <section class="reg_box">
 	<form class="login-form" action="#" method="post">
                    		<div class="logo_icon"></div>

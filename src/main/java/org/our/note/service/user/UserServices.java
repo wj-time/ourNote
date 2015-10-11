@@ -7,5 +7,7 @@ import org.our.note.model.user.User;
 public interface UserServices {
 
 	List<User> getAll();
+	
+	User add(User user);
 }
  

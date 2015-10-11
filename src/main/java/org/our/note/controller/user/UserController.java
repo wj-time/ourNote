@@ -8,6 +8,7 @@ import org.our.note.service.user.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,11 +20,18 @@ public class UserController {
 	private UserServices userService;
 	
 	@RequestMapping(value="list",method=RequestMethod.GET)
-	public String toDelete(Model model){
+	public String list(Model model){
 		List<User> list = new ArrayList<User>();
 		list = userService.getAll();
 		model.addAttribute("list", list);
 		return "user/list";
+	}
+	
+	@RequestMapping(value="add",method=RequestMethod.POST)
+	public String register(@ModelAttribute("user") User user){
+	    userService.add(user);
+	    return "redirect:list "; 
+	    //return list(model);
 	}
 }
  
