@@ -6,9 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
 <link href="statics/css/base.css" rel="stylesheet">
+<script type="text/javascript" src="statics/js/jquery-1.11.3.min.js"></script>
 <!--[if lt IE 9]>
 <script src="statics/js/html5shiv.js"></script>
 <![endif]-->
+<script type="text/javascript" src="static/js/jquery-html5Validate.js"></script>
 </head>
 <body>
 <div class="login_top_btn"><a class="btn" href="register.jsp">新用户注册</a></div>
@@ -20,13 +22,13 @@
           <div class="control-group">
             <label class="control-label" for="username">用户名</label>
             <div class="controls">
-              <input type="text" id="username" class="span3" placeholder="请输入用户名" nullmsg="请填写用户名" value="" name="username">
+              <input type="text" id="username" class="span3" placeholder="请输入用户名" nullmsg="请填写用户名" value="" name="username" required>
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="inputPassword">密 码</label>
             <div class="controls">
-              <input type="password" id="inputPassword"  class="span3" placeholder="请输入密码" nullmsg="请填写密码" name="password">
+              <input type="password" id="inputPassword"  class="span3" placeholder="请输入密码" nullmsg="请填写密码" name="password" required>
             </div>
           </div>     
           <div class="control-group">
@@ -39,4 +41,9 @@
     </form>
 </section>
 </body>
+<script type="text/javascript">
+	$("login-form").html5Validate(function(){
+		alert("登录成功！");
+	});
+</script>
 </html>
